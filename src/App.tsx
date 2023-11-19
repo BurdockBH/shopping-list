@@ -145,6 +145,9 @@ function App() {
 
     return (
         <div className="App">
+            <h1 className="text-center text-4xl pb-6">Select User, then Add to Cart an item</h1>
+
+
             <div className="Shopper-list">
                 <ShopperGrid setShopper={SetShopper} data={shoppers}/>
             </div>
@@ -155,19 +158,10 @@ function App() {
                           data={items} setStatusText={SetStatusText}/>
             </div>
 
-
-            <div className="Shopping-list">
-                <ShoppingListComponent shoppingList={shoppingLists}/>
-            </div>
-
             <div className="button-status pd-96">
-                <div className="status-message mx-auto text-center mb-5">
-                    <div className="status-message-text">
-                        <p>{statusText}</p>
-                    </div>
-                </div>
 
-                <div className="delete-button mx-auto text-center">
+
+                <div className="delete-button mx-auto pt-5 text-center">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                             onClick={() => {
                                 deleteShoppingListsData().then((response: any) => {
@@ -181,7 +175,18 @@ function App() {
                         Delete all shopping lists
                     </button>
                 </div>
+                <div className="status-message mx-auto text-center mb-5">
+                    <div className="status-message-text">
+                        <p>{statusText}</p>
+                    </div>
+                </div>
             </div>
+
+            <div className="Shopping-list">
+                <ShoppingListComponent shoppingList={shoppingLists}/>
+            </div>
+
+
         </div>
     );
 }
