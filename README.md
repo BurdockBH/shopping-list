@@ -1,4 +1,4 @@
-#REQUIERS backend from https://github.com/BurdockBH/shopper-list-backend
+# REQUIERS backend from https://github.com/BurdockBH/shopper-list-backend
 
 # Getting Started with Create React App
 
